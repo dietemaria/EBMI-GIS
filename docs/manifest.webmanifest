@@ -1,0 +1,28 @@
+{
+    "name": "gruppe",
+    "short_name": "gruppe",
+    "display": "standalone",
+    "start_url": "./",
+    "scope": "./",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "description": "gruppe",
+    "icons": [
+        {
+            "src": "icon512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }, {
+            "src": "icon16.png",
+            "sizes": "16x16",
+            "type": "image/png",
+            "purpose": "badge"
+        }, {
+            "src": "maskable-icon512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

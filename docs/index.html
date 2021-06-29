@@ -5,13 +5,56 @@
     <title>Kartendarstellung</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ccffcc">
+    <meta name="description" content="gruppe">
 
     <link rel="stylesheet" href="leaflet.css">
     <script src="leaflet.js" defer></script>
 
     <script defer src="main.js"></script>
+
+    <style>
+        #pwa-install-prompt {
+            display: none;
+            position: absolute;
+            top: 100%;
+            padding: 15px;
+            background: #c19898;
+            border-radius: 10px;
+            left: 50%;
+            transform: translate(-50%,-110%);
+        }
+        #pwa-install-prompt.show {
+            display: block;
+        }
+        .prompt-buttons {
+            display: flex;
+        }
+    </style>
+
 </head>
 <body>
     <div id="map"></div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .catch(console.error);
+        }
+      </script>
+      
+      <div id="pwa-install-prompt">
+        <strong>Install App</strong>
+        <p>Install this App as a PWA!</p>
+        <div class="prompt-buttons">
+          <button data-id="pwa-install-y">Yes</button>
+          <button data-id="pwa-install-n">No</button>
+        </div>
+      </div>
+      
 </body>
 </html>
