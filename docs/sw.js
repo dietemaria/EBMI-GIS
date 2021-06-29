@@ -3,6 +3,8 @@ self.addEventListener('install', (event) => {
         caches.open('gruppe-v1')
             .then(cache => cache.addAll([
                 'index.html',
+                'leaflet.js',
+                'leaflet.css',
                 'main.js',
                 'icon512.png',
                 'icon192.png',
